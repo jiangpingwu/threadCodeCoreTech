@@ -11,6 +11,7 @@ public class MyThread1 extends Thread {
     private int count = 5;
 
     @Override
+    //synchronized public void run() {
     public void run() {
         super.run();
         //此实例不要用for语句，因为使用同步后其他线程就得不到运行的机会了
