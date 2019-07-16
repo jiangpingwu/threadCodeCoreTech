@@ -16,6 +16,9 @@ public class Run1 {
         thread.setName("A");
         thread.start();
         System.out.println("main end t1 isAlive="+thread.isAlive());
+        System.out.println("main begin countOperate isAlive="+Thread.currentThread().isAlive());
+        countOperate.start();
+        System.out.println("main end countOperate isAlive="+Thread.currentThread().isAlive());
 
 
     }
