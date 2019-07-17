@@ -15,6 +15,7 @@ public class Run {
             thread.start();
             Thread.sleep(2000);
             thread.interrupt();
+            System.out.println(thread.getName()+" thread.interrupt");
         } catch (InterruptedException e) {
             System.out.println("main catch");
             e.printStackTrace();
