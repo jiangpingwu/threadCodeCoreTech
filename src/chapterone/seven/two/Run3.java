@@ -1,0 +1,26 @@
+package chapterone.seven.two;
+
+/**
+ * @ClassName: Run
+ * @description: TODO
+ * @author: alan
+ * @date: 2019-07-16 15:50
+ * @version: V1.0
+ **/
+public class Run3 {
+
+    public static void main(String[] args) {
+        try {
+            MyThread thread= new MyThread();
+            thread.start();
+            Thread.sleep(1000);
+            thread.interrupt();
+            System.out.println("是否停止1？ =  "+thread.isInterrupted());
+            System.out.println("是否停止2？ =  "+thread.isInterrupted());
+        } catch (InterruptedException e) {
+            System.out.println("main catch");
+            e.printStackTrace();
+        }
+        System.out.println("end");
+    }
+}
